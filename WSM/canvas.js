@@ -50,25 +50,27 @@ c.strokeStyle="blue";/*색상
 c.stroke();*/
 
 var x = 200;
-var dx=4;
-var dy=4;
-var radius=30;
+var y = 200;
+var dx = 10;
+var dy = 10;
+var radius = 30;
 function animate(){
     requestAnimationFrame(animate);
     c.clearRect(0,0,innerWidth,innerHeight);
-
     c.beginPath();
-    c.arc(x,200,radius,0,Math.PI * 2,false);
-    c.strokeStyle="blue";/*색상*/
+    c.arc(x,y,radius,0,Math.PI * 2,false);
+    c.strokeStyle="blue";
     c.stroke();
-
-    if(x > innerWidth || x-radius){
+    
+    if(x+radius>innerWidth||x-radius<0){
         dx=-dx;
     }
-    if(y > innerWidth || y-radius){
+    
+    if(y+radius>innerHeight||y-radius<0){
         dy=-dy;
     }
-    x += dx;
     y += dy;
+    x += dx;
+    
 }
-
+animate();
