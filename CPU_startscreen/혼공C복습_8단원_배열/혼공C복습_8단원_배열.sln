@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32616.157
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "혼공C복습_8단원_배열", "혼공C복습_8단원_배열.vcxproj", "{CF5EC467-4A73-4DF7-BB2A-46AE8CD79A9C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CF5EC467-4A73-4DF7-BB2A-46AE8CD79A9C}.Debug|x64.ActiveCfg = Debug|x64
+		{CF5EC467-4A73-4DF7-BB2A-46AE8CD79A9C}.Debug|x64.Build.0 = Debug|x64
+		{CF5EC467-4A73-4DF7-BB2A-46AE8CD79A9C}.Debug|x86.ActiveCfg = Debug|Win32
+		{CF5EC467-4A73-4DF7-BB2A-46AE8CD79A9C}.Debug|x86.Build.0 = Debug|Win32
+		{CF5EC467-4A73-4DF7-BB2A-46AE8CD79A9C}.Release|x64.ActiveCfg = Release|x64
+		{CF5EC467-4A73-4DF7-BB2A-46AE8CD79A9C}.Release|x64.Build.0 = Release|x64
+		{CF5EC467-4A73-4DF7-BB2A-46AE8CD79A9C}.Release|x86.ActiveCfg = Release|Win32
+		{CF5EC467-4A73-4DF7-BB2A-46AE8CD79A9C}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {426675A8-509E-4FDF-8D08-AC1B122414EA}
+	EndGlobalSection
+EndGlobal
