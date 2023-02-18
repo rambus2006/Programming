@@ -1,0 +1,8 @@
+﻿  _3단원_확인문제.c
+C:\1409방민서\혼공C복습_3단원_변수와데이터입력\_3단원_확인문제.c(10,2): warning C4013: 'prinf'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
+C:\1409방민서\혼공C복습_3단원_변수와데이터입력\_3단원_확인문제.c(12,2): warning C4013: 'pritnf'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
+C:\1409방민서\혼공C복습_3단원_변수와데이터입력\_3단원_확인문제.c(11,2): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\1409방민서\혼공C복습_3단원_변수와데이터입력\_3단원_확인문제.c(13,2): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+_3단원_확인문제.obj : error LNK2019: prinfmain 함수에서 참조되는 확인할 수 없는 외부 기호
+_3단원_확인문제.obj : error LNK2019: pritnfmain 함수에서 참조되는 확인할 수 없는 외부 기호
+C:\1409방민서\혼공C복습_3단원_변수와데이터입력\x64\Debug\혼공C복습_3단원_변수와데이터입력.exe : fatal error LNK1120: 2개의 확인할 수 없는 외부 참조입니다.
