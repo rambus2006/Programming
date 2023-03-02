@@ -20,27 +20,36 @@ void infoDraw();    //게임정보화면 구현하기
 int main()
 {
     init();
-    TitleDraw(); //화면 출력
-    
-
-    int keyCode = keyControl();
-  
     while (1) {
-        titleDraw();
+        TitleDraw(); //화면 출력
         int menuCode = menuDraw();
         if (menuCode == 0) {
             //게임 시작으로 이동
         }
-        else if (menuCode == 1) {
-            //게임 정보로 이동
-        }
         else if (menuCode == 2) {
-            return 0; //종료
+            //게임 정보로 이동
+            infoDraw();
         }
-        system("cls");  //화면 모두 지우기
+        else if (menuCode == 4){
+            return 0;
+        }
+        system("cls");
     }
-    return 0; //종료
-    
+    return 0;
+}
+
+//게임정보화면 구현하는 함수
+void infoDraw() {
+    system("cls");  //화면 모두 지우기
+    printf("\n\n");
+    printf("\t[ 게 임 방 법 ]\t\n\n\n");
+    printf("- 이동 : W , A , S ,D \n");
+
+    while (1) {
+        if (keyControl() == SUBMIT) {
+            break;
+        }
+    }
 }
 
 //제목 출력 함수 
@@ -99,18 +108,33 @@ void TitleDraw()
     gotoxy(x, y++);
 
 }
-//게임정보화면 구현하는 함수
-void infoDraw() {
-    system("cls");  //화면 모두 지우기
-    printf("\n\n");
-    printf("\t[ 게 임 방 법 ]\t\n");
-}
 
+//위,아래 ,왼,우 키값 지정 함수 
+int keyControl() {
+    char temp = getch();
+
+    if (temp == 'w' || temp == 'W') {
+        return UP;
+    }
+    else if (temp == 'a' || temp == 'A') {
+        return LEFT;
+    }
+    else if (temp == 's' || temp == 'S') {
+        return DOWN;
+    }
+    else if (temp == 'd' || temp == 'D') {
+        return RIGHT;
+    }
+    else if (temp == ' ') {
+        return SUBMIT;
+    }
+}
 //콘솔 화면 지정 함수 
 void init() {
     system("mode con:cols=120 lines=30 | title Save the Princess");
 }
 
+//struct MyStruct{ COORD pos; };
 //gotoxy 함수 (마우스 끝 위치 지정함수)
 void gotoxy(int x, int y) {
     HANDLE consoleHandle = GetStdHandle(STD_OUTPUT_HANDLE); //콘솔 핸들 가져오기 
@@ -160,25 +184,6 @@ int menuDraw() {
     }
 }
 
-//위,아래 ,왼,우 키값 지정 함수 
-int keyControl() {
-    char temp = getch();
 
-    if (temp == 'w' || temp == 'W') {
-        return UP;
-    }
-    else if (temp == 'a' || temp == 'A') {
-        return LEFT;
-    }
-    else if (temp == 's' || temp == 'S') {
-        return DOWN;
-    }
-    else if (temp == 'd' || temp == 'D') {
-        return RIGHT;
-    }
-    else if (temp == ' ') {
-        return SUBMIT;
-    }
-}
 
 
