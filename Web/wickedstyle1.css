@@ -3,24 +3,27 @@
     padding:0;
     box-sizing: 0;
     font-family: 'Gloock', serif;
-
+    color:black;
 }
 .container{
     width: 100%;
-    height:100vh;
+    height:100%;
     background: linear-gradient(75.7deg, rgb(34, 126, 34) 3.8%, rgb(99, 162, 17) 87.1%);
 }
 .container .header{
-    width: 80%; 
+    width: 100%; 
     height: 10%;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center; 
+    background-color:black;
+    position:fixed;
+    z-index: 2;
 }
 .container .header h1 img{
     text-decoration: none;
-    weight : 40px;
+    margin-left : 40px;
     height:30px;
 }
 .container .nav ul li{
@@ -34,4 +37,211 @@
 .container .nav ul li a:hover{
     color:greenyellow;
 }
+/*HOME 1-1*/
+.container .HOME1-1{
+    margin: 0 30px;
+    padding: 20px;
+}
+/*이미지 슬라이드 https://blogpack.tistory.com/815*/
+.slider{
+    width: 1200px;
+    height: 100vh;
+    position: relative;
+    top:5px;
+    margin: 0 auto;
+    overflow: hidden; /* 현재 슬라이드 오른쪽에 위치한 나머지 슬라이드 들이 보이지 않도록 가림 */
+}
+.slider input[type=radio]{
+    display: none;
+}
 
+ul.imgs{
+    padding: 0;
+    margin: 0;
+    list-style: none;    
+}
+ul.imgs li{
+    position: absolute;
+    left: 640px;
+    transition-delay: 1s; /* 새 슬라이드가 이동해 오는 동안 이전 슬라이드 이미지가 배경이 보이도록 지연 */
+
+    padding: 0;
+    margin: 0;
+}
+.bullets{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 20px;
+    z-index: 2;
+}
+.bullets label{
+    display: inline-block;
+    border-radius: 50%;
+    background-color: rgba(0,0,0,0.55);
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+/* 현재 선택된 불릿 배경 흰색으로 구분 표시 */
+.slider input[type=radio]:nth-child(1):checked~.bullets>label:nth-child(1){
+    background-color: #fff;
+}
+.slider input[type=radio]:nth-child(2):checked~.bullets>label:nth-child(2){
+    background-color: #fff;
+}
+.slider input[type=radio]:nth-child(3):checked~.bullets>label:nth-child(3){
+    background-color: #fff;
+}
+.slider input[type=radio]:nth-child(4):checked~.bullets>label:nth-child(4){
+    background-color: #fff;
+}
+.slider input[type=radio]:nth-child(1):checked~ul.imgs>li:nth-child(1){
+    left: 0;
+    transition: 0.5s;
+    z-index:1;
+}
+.slider input[type=radio]:nth-child(2):checked~ul.imgs>li:nth-child(2){
+    left: 0;
+    transition: 0.5s;
+    z-index:1;
+}
+.slider input[type=radio]:nth-child(3):checked~ul.imgs>li:nth-child(3){
+    left: 0;
+    transition: 0.5s;
+    z-index:1;
+}
+.slider input[type=radio]:nth-child(4):checked~ul.imgs>li:nth-child(4){
+    left: 0;
+    transition: 0.5s;
+    z-index:1;
+}
+/*HOME1-1끝*/
+/*about */
+.aboutcontainer{
+    background: black;
+}
+.aboutcontainer .about1{
+    background-image: linear-gradient(rgba(144, 224, 151, 0.736), rgba(255, 255, 255, 0.836)),url("./images/newspaper.jpg");
+    margin-left: 355px;
+    margin-right:355px;
+}
+.aboutcontainer .about1 h1{
+    padding:30px; 
+    text-align:center;
+    color: black; 
+    font-size: XX-large;
+}
+.aboutcontainer .about1 nav{
+    margin: 0 100px;
+    padding:20px;
+   
+}
+
+.aboutcontainer .about1 img{
+    display: block;
+    margin:auto;
+}
+.aboutcontainer .about1 h2{
+    padding:30px;
+    text-align: center;
+    font-family: 'MaruBuriExtraLight';
+    font-family: 'MaruBuriLight';
+    font-family: 'MaruBuri';
+    font-family: 'MaruBuriBold';
+    font-family: 'MaruBuriSemiBold';
+    color: #295f4e; 
+}
+.aboutcontainer .about1 p{
+    text-align: center;
+    font-family: 'MaruBuriExtraLight';
+    font-family: 'MaruBuriLight';
+    font-family: 'MaruBuri';
+    font-family: 'MaruBuriBold';
+    font-family: 'MaruBuriSemiBold';
+    font-size: large;
+    font-weight: bold;
+}
+/*about 끝*/
+/*news 시작*/
+.newscontainer{
+    background-color: #295f4e;
+    height: 800px;
+
+}
+/* Float four columns side by side */
+.column {
+    float: left;
+    width: 25%;
+    padding: 60 20px;
+    margin-top: 200px;
+    margin-left: 30px;
+    margin-right: 30px;
+   
+  }
+  
+  /* Remove extra left and right margins, due to padding in columns */
+ /* .row {margin: 0 -5px;}*/
+  
+  /* Clear floats after the columns */
+  /*.row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }*/
+  
+  /* Style the counter cards */
+  /*.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect 
+    padding: 180px;
+    text-align: center;
+    background-color: #f1f1f1;
+  }*/
+  
+  /* Responsive columns - one column layout (vertical) on small screens */
+  /*@media screen and (max-width: 600px) {
+    .column {
+      width: 100%;
+      display: block;
+      margin-bottom: 20px;
+    }
+  }*/
+  /*.card-list{
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+}
+ .card{
+     min-width: 350px;
+    scroll-snap-align: center;
+}*/
+.card-item {
+    margin-bottom: 2rem;
+}
+.card-image {
+    height: 0;
+    padding-bottom: 60%; 
+    background-repeat: no-repeat; 
+    background-position: center; 
+    background-size: cover; 
+}
+.card-desc {
+    padding: 1em;
+    background: white;
+}
+@media(min-width: 600px){
+    .card-list {
+        display: flex;
+        flex-wrap: wrap; 
+        margin: 0 -1rem;
+    }
+    .card-item {
+        width: 50%;
+        padding: 0 1rem; 
+    }
+}
+@media(min-width: 1200px){
+    .card-item {
+        width: 33.33333%; 
+    }
+}
